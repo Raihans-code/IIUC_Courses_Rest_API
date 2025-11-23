@@ -1,6 +1,7 @@
 package com.iiuc.cse.b58.s3f.g5.iiuc_course_api.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -101,13 +102,13 @@ public class Course {
     public String toString() {
         return "Course{" +
                 "id=" + id +
-                ", courseCode='" + courseCode + '\'' +
-                ", courseTitle='" + courseTitle + '\'' +
-                ", courseCredit=" + courseCredit +
-                ", courseType='" + courseType + '\'' +
-                ", semester='" + semester + '\'' +
-                ", departmentId=" + departmentId +
-                ", courseTeacher='" + courseTeacher + '\'' +
+                ", courseCode:'" + courseCode + '\'' +
+                ", courseTitle:'" + courseTitle + '\'' +
+                ", courseCredit:" + courseCredit +
+                ", courseType:" + courseType + '\'' +
+                ", semester:'" + semester + '\'' +
+                ", departmentId=:" + departmentId + '\'' +
+                ", courseTeacher='" + courseTeacher +
                 '}';
     }
 }
