@@ -33,8 +33,12 @@ public class CourseRepository {
     //Get Course by ID
     public Optional<Course> findById(Long id)
     {
-        return courseList.stream().filter(c->c.getId().equals(id)).findFirst()
-                ;
+        return courseList.stream().filter(c->c.getId().equals(id)).findFirst();
+    }
+
+    public Optional<Course> findByCourseCode(String code)
+    {
+        return courseList.stream().filter(c -> c.getCourseCode().equals(code)).findFirst();
     }
 
 
