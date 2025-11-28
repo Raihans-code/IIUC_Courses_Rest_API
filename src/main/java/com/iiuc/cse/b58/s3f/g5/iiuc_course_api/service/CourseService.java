@@ -6,7 +6,6 @@ import java.util.Optional;
 
 import com.iiuc.cse.b58.s3f.g5.iiuc_course_api.model.Course;
 import com.iiuc.cse.b58.s3f.g5.iiuc_course_api.repository.CourseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,7 +13,6 @@ public class CourseService {
     private final CourseRepository courseRepository;
     private Long nextId = 100L;
 
-    @Autowired
     public CourseService(CourseRepository courseRepository) {
         this.courseRepository = courseRepository;
     }
