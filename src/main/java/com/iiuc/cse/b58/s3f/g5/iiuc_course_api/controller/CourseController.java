@@ -97,6 +97,25 @@ public class CourseController {
         }
     }
 
+    @DeleteMapping("/code/{code}")
+    public String deleteCoursebyCode(@PathVariable String code)
+    {
+        try
+        {
+            boolean deleted = courseService.deleteCourseByCode(code);
+            if(deleted)
+            {
+                return "Course with Code " + code + "deleted successfully.";
+            } else
+            {
+                return "Course with Code " + code + "not found or cannot  delete.";
+            }
+        }
+        catch (IllegalStateException | IllegalArgumentException e) {
+            return e.getMessage();
+        }
+    }
+
     // ---------------- Assign faculty to course ----------------
     @PostMapping("/{id}/assign")
     public Object assignFaculty(

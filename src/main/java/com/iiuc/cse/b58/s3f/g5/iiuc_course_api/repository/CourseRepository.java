@@ -59,6 +59,11 @@ public class CourseRepository {
         return courseList.removeIf(c -> id.equals(c.getId()));
     }
 
+    public boolean deleteByCourseCode(String code)
+    {
+        return courseList.removeIf(c-> code.equals(c.getCourseCode()));
+    }
+
 }
 
 
